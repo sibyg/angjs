@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>First Test</title>
-    <script src="angular.js"> </script>
+    <script src="angular.js"></script>
     <link href="bootstrap.css" rel="stylesheet"/>
     <link href="bootstrap-theme.css" rel="stylesheet"/>
 </head>
 <body>
-    <div class="btn btn-default">{{"AngularJS"}}</div>
-    <div class="btn btn-success">Bootstrap</div>
+<script language="javascript">
+    var myapp = angular.module("myApp", []);
+    myapp.controller("myCntrl", function ($scope) {
+        $scope.hellomodel = "Hello World!";
+    });
+</script>
+
+<div ng-app="myApp" ng-controller="myCntrl" class="btn btn-default">{{hellomodel}}</div>
+<div class="btn btn-success">Bootstrap</div>
 </body>
 </html>
