@@ -8,7 +8,7 @@
     <link href="bootstrap.css" rel="stylesheet"/>
     <link href="bootstrap-theme.css" rel="stylesheet"/>
     <script>
-        angular.module("exampleApp", [])
+        angular.module("controllersExampleApp", [])
                 .service("ZipCodes", function ($rootScope) {
                     return {
                         setZipCode: function (type, zip) {
@@ -33,7 +33,7 @@
                 });
     </script>
 </head>
-<body ng-app="exampleApp" ng-controller="topLevelCtrl">
+<body ng-app="controllersExampleApp" ng-controller="topLevelCtrl">
 
 <div class="well">
     <h4>Top Level Controller</h4>
